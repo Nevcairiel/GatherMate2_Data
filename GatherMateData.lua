@@ -44,6 +44,7 @@ local cataZones = {
 	[709] = true,
 	[700] = true,
 	[613] = true,
+	[614] = true,
 	[640] = true,
 	[605] = true,
 	[544] = true,
