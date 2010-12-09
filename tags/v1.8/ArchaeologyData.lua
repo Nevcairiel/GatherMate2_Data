@@ -1,0 +1,2 @@
+GatherMateData2ArchaeologyDB = 	{
+}
