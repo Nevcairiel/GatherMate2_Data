@@ -59,7 +59,7 @@ function GatherMateData:PerformMerge(dbs,style, zoneFilter)
 		elseif zoneFilter == "WRATH" then
 			filter = wrathZones
 		elseif zoneFilter == "CATACLYSM" then
-			fiter = cataZones
+			filter = cataZones
 		end
 	end
 	if dbs["Mines"]    then self:MergeMines(style ~= "Merge",filter) end
