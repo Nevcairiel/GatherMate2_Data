@@ -51,6 +51,20 @@ local cataZones = {
 	[737] = true,
 }
 
+local mistsZones = {
+	[806] = true,
+	[807] = true,
+	[808] = true,
+	[809] = true,
+	[810] = true,
+	[811] = true,
+	[857] = true,
+	[858] = true,
+	[873] = true,
+	[903] = true,
+	[905] = true,	
+}
+
 function GatherMateData:PerformMerge(dbs,style, zoneFilter)
 	local filter = nil
 	if zoneFilter and type(zoneFilter) == "string" then
@@ -60,6 +74,8 @@ function GatherMateData:PerformMerge(dbs,style, zoneFilter)
 			filter = wrathZones
 		elseif zoneFilter == "CATACLYSM" then
 			filter = cataZones
+		elseif zoneFilter == "MISTS" then
+			filter = mistsZones
 		end
 	end
 	if dbs["Mines"]    then self:MergeMines(style ~= "Merge",filter) end
