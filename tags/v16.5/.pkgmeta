@@ -1,0 +1,4 @@
+package-as: GatherMate2_Data
+tools-used:
+    - data-tools # same as data-tools/mainline
+
