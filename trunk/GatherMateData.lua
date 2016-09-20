@@ -81,6 +81,17 @@ local wodZones = {
 	[1011] = true,
 }
 
+local legionZones = {
+	[1014] = true,
+	[1015] = true,
+	[1017] = true,
+	[1018] = true,
+	[1021] = true,
+	[1024] = true,
+	[1033] = true,
+	[1096] = true,
+}
+
 function GatherMateData:PerformMerge(dbs,style, zoneFilter)
 	local filter = nil
 	if zoneFilter and type(zoneFilter) == "string" then
@@ -94,6 +105,8 @@ function GatherMateData:PerformMerge(dbs,style, zoneFilter)
 			filter = mistsZones
 		elseif zoneFilter == "WOD" then
 			filter = wodZones
+		elseif zoneFilter == "LEGION" then
+			filter = legionZones
 		end
 	end
 	if dbs["Mines"]    then self:MergeMines(style ~= "Merge",filter) end
