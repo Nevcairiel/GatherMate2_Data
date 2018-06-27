@@ -90,6 +90,9 @@ local legionZones = {
 	[1024] = true,
 	[1033] = true,
 	[1096] = true,
+	[1135] = true,
+	[1170] = true,
+	[1171] = true,
 }
 
 function GatherMateData:PerformMerge(dbs,style, zoneFilter)
