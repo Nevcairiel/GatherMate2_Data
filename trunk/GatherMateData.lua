@@ -126,14 +126,10 @@ end
 function GatherMateData:MergeMines(clear,zoneFilter)
 	if clear then GatherMate:ClearDB("Mining") end
 	for zoneID, node_table in pairs(GatherMateData2MineDB) do
-		if zoneFilter and zoneFilter[zoneID] or not zoneFilter then
+		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
 				GatherMate:InjectNode(zoneID,coord,"Mining", nodeID)
 			end
-		else
-			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Mining", nodeID)
-			end			
 		end
 	end
 end
@@ -142,11 +138,7 @@ end
 function GatherMateData:MergeHerbs(clear,zoneFilter)
 	if clear then GatherMate:ClearDB("Herb Gathering") end
 	for zoneID, node_table in pairs(GatherMateData2HerbDB) do
-		if zoneFilter and zoneFilter[zoneID] or not zoneFilter then
-			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Herb Gathering", nodeID)
-			end
-		else
+		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
 				GatherMate:InjectNode(zoneID,coord,"Herb Gathering", nodeID)
 			end
@@ -158,14 +150,10 @@ end
 function GatherMateData:MergeGases(clear,zoneFilter)
 	if clear then GatherMate:ClearDB("Extract Gas") end
 	for zoneID, node_table in pairs(GatherMateData2GasDB) do
-		if zoneFilter and zoneFilter[zoneID] or not zoneFilter then
+		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
 				GatherMate:InjectNode(zoneID,coord,"Extract Gas", nodeID)
 			end
-		else
-			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Extract Gas", nodeID)
-			end			
 		end
 	end
 end
@@ -174,42 +162,30 @@ end
 function GatherMateData:MergeFish(clear,zoneFilter)
 	if clear then GatherMate:ClearDB("Fishing") end
 	for zoneID, node_table in pairs(GatherMateData2FishDB) do
-		if zoneFilter and zoneFilter[zoneID] or not zoneFilter then
+		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
 				GatherMate:InjectNode(zoneID,coord,"Fishing", nodeID)
 			end
-		else
-			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Fishing", nodeID)
-			end			
 		end
 	end
 end
 function GatherMateData:MergeTreasure(clear,zoneFilter)
 	if clear then GatherMate:ClearDB("Treasure") end
 	for zoneID, node_table in pairs(GatherMateData2TreasureDB) do
-		if zoneFilter and zoneFilter[zoneID] or not zoneFilter then
+		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
 				GatherMate:InjectNode(zoneID,coord,"Treasure", nodeID)
 			end
-		else
-			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Treasure", nodeID)
-			end			
 		end
 	end
 end
 function GatherMateData:MergeArchaelogy(clear,zoneFilter)
 	if clear then GatherMate:ClearDB("Archaeology") end
 	for zoneID, node_table in pairs(GatherMateData2ArchaeologyDB) do
-		if zoneFilter and zoneFilter[zoneID] or not zoneFilter then
+		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
 				GatherMate:InjectNode(zoneID,coord,"Archaeology", nodeID)
 			end
-		else
-			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Archaeology", nodeID)
-			end			
 		end
 	end
 end
