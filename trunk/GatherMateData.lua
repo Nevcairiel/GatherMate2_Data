@@ -152,7 +152,7 @@ function GatherMateData:MergeMines(clear,zoneFilter)
 	for zoneID, node_table in pairs(GatherMateData2MineDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Mining", nodeID)
+				GatherMate:InjectNode2(zoneID,coord,"Mining", nodeID)
 			end
 		end
 	end
@@ -164,7 +164,7 @@ function GatherMateData:MergeHerbs(clear,zoneFilter)
 	for zoneID, node_table in pairs(GatherMateData2HerbDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Herb Gathering", nodeID)
+				GatherMate:InjectNode2(zoneID,coord,"Herb Gathering", nodeID)
 			end
 		end
 	end
@@ -176,7 +176,7 @@ function GatherMateData:MergeGases(clear,zoneFilter)
 	for zoneID, node_table in pairs(GatherMateData2GasDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Extract Gas", nodeID)
+				GatherMate:InjectNode2(zoneID,coord,"Extract Gas", nodeID)
 			end
 		end
 	end
@@ -188,7 +188,7 @@ function GatherMateData:MergeFish(clear,zoneFilter)
 	for zoneID, node_table in pairs(GatherMateData2FishDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Fishing", nodeID)
+				GatherMate:InjectNode2(zoneID,coord,"Fishing", nodeID)
 			end
 		end
 	end
@@ -198,7 +198,7 @@ function GatherMateData:MergeTreasure(clear,zoneFilter)
 	for zoneID, node_table in pairs(GatherMateData2TreasureDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Treasure", nodeID)
+				GatherMate:InjectNode2(zoneID,coord,"Treasure", nodeID)
 			end
 		end
 	end
@@ -208,7 +208,7 @@ function GatherMateData:MergeArchaelogy(clear,zoneFilter)
 	for zoneID, node_table in pairs(GatherMateData2ArchaeologyDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
 			for coord, nodeID in pairs(node_table) do
-				GatherMate:InjectNode(zoneID,coord,"Archaeology", nodeID)
+				GatherMate:InjectNode2(zoneID,coord,"Archaeology", nodeID)
 			end
 		end
 	end
