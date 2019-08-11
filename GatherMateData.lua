@@ -115,6 +115,8 @@ local bfaZones = {
 	[942] = true,
 	[1161] = true,
 	[1165] = true,
+	[1355] = true,
+	[1462] = true,
 }
 
 function GatherMateData:PerformMerge(dbs,style, zoneFilter)
