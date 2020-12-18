@@ -6,8 +6,8 @@
 ## X-Email: sal.scotto@gmail.com
 ## Version: @project-version@
 ## LoadOnDemand: 1
-## X-Generated-Version: $Revision$
 ## Dependencies: GatherMate2
+## X-Curse-Project-ID: 26737
 
 MiningData.lua
 HerbalismData.lua
