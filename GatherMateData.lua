@@ -143,6 +143,7 @@ local dfZones = {
 	[2239] = true, -- Amirdrassil
 	[2262] = true, -- Traitor's Rest
 	[2199] = true, -- Tyrhold Reservoir
+	[2085] = true, -- The Primalist Future
 }
 
 local twwZones = {
