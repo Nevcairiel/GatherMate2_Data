@@ -141,6 +141,8 @@ local dfZones = {
 	[2133] = true, -- Zaralek Cavern
 	[2200] = true, -- Emerald Dream
 	[2239] = true, -- Amirdrassil
+	[2262] = true, -- Traitor's Rest
+	[2199] = true, -- Tyrhold Reservoir
 }
 
 local twwZones = {
