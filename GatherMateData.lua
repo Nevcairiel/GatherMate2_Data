@@ -147,7 +147,7 @@ local dfZones = {
 }
 
 local twwZones = {
-	[2048] = true, -- Isle of Dorn
+	[2248] = true, -- Isle of Dorn
 	[2215] = true, -- Hallowfall
 	[2214] = true, -- The Ringing Deeps
 	[2255] = true, -- Azj-Kahet
