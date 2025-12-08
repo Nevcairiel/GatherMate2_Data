@@ -1,4 +1,4 @@
-## Interface: 110002
+## Interface: 110207,120000
 ## Notes: Wowhead Data dump for GatherMate2
 ## Title: GatherMate2Data
 ## Author: kagaro, Xinhuan
@@ -17,4 +17,6 @@ GasData.lua
 FishData.lua
 TreasureData.lua
 ArchaeologyData.lua
+TimberData.lua
+
 GatherMateData.lua
