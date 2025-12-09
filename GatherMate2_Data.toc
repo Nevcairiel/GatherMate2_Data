@@ -6,6 +6,7 @@
 ## Group: GatherMate2
 ## X-Email: sal.scotto@gmail.com
 ## Version: @project-version@
+## X-Generated-Version: @project-revision@
 ## LoadOnDemand: 1
 ## Dependencies: GatherMate2
 ## X-Curse-Project-ID: 26737
