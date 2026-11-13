@@ -183,7 +183,7 @@ local mnZones ={
 	[2536] = true, -- Atal'Aman
 }
 
-function GatherMateData:PerformMerge(dbs,style, zoneFilter)
+function GatherMateData:PerformMerge(dbs, style, zoneFilter)
 	local filter = nil
 	if zoneFilter and type(zoneFilter) == "string" then
 		if zoneFilter == "TBC" then
@@ -221,8 +221,10 @@ function GatherMateData:PerformMerge(dbs,style, zoneFilter)
 	GatherMate:SendMessage("GatherMateData2Import")
 	--GatherMate:CleanupDB()
 end
+
 -- Insert mining data
 function GatherMateData:MergeMines(clear,zoneFilter)
+	if not GatherMateData2MineDB then return end
 	if clear then GatherMate:ClearDB("Mining") end
 	for zoneID, node_table in pairs(GatherMateData2MineDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
@@ -235,6 +237,7 @@ end
 
 -- herbs
 function GatherMateData:MergeHerbs(clear,zoneFilter)
+	if not GatherMateData2HerbDB then return end
 	if clear then GatherMate:ClearDB("Herb Gathering") end
 	for zoneID, node_table in pairs(GatherMateData2HerbDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
@@ -247,6 +250,7 @@ end
 
 -- gases
 function GatherMateData:MergeGases(clear,zoneFilter)
+	if not GatherMateData2GasDB then return end
 	if clear then GatherMate:ClearDB("Extract Gas") end
 	for zoneID, node_table in pairs(GatherMateData2GasDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
@@ -259,6 +263,7 @@ end
 
 -- fish
 function GatherMateData:MergeFish(clear,zoneFilter)
+	if not GatherMateData2FishDB then return end
 	if clear then GatherMate:ClearDB("Fishing") end
 	for zoneID, node_table in pairs(GatherMateData2FishDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
@@ -269,6 +274,7 @@ function GatherMateData:MergeFish(clear,zoneFilter)
 	end
 end
 function GatherMateData:MergeTreasure(clear,zoneFilter)
+	if not GatherMateData2TreasureDB then return end
 	if clear then GatherMate:ClearDB("Treasure") end
 	for zoneID, node_table in pairs(GatherMateData2TreasureDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
@@ -279,6 +285,7 @@ function GatherMateData:MergeTreasure(clear,zoneFilter)
 	end
 end
 function GatherMateData:MergeArchaelogy(clear,zoneFilter)
+	if not GatherMateData2ArchaeologyDB then return end
 	if clear then GatherMate:ClearDB("Archaeology") end
 	for zoneID, node_table in pairs(GatherMateData2ArchaeologyDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
@@ -289,6 +296,7 @@ function GatherMateData:MergeArchaelogy(clear,zoneFilter)
 	end
 end
 function GatherMateData:MergeLogging(clear,zoneFilter)
+	if not GatherMateData2LoggingDB then return end
 	if clear then GatherMate:ClearDB("Logging") end
 	for zoneID, node_table in pairs(GatherMateData2LoggingDB) do
 		if not zoneFilter or zoneFilter[zoneID] then
